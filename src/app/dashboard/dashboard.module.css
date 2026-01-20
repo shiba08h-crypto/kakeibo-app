@@ -23,12 +23,25 @@
   font-size: 13px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .subtle {
+    color: #999;
+  }
+}
+
 .card {
   background: #fff;
   border: 1px solid #e7e7e7;
   border-radius: 12px;
   padding: 16px;
   margin-top: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #1a1a1a;
+    border-color: #333;
+  }
 }
 
 .h2 {
@@ -58,6 +71,15 @@
   font-size: 14px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .input,
+  .select {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ededed;
+  }
+}
+
 .button {
   height: 38px;
   padding: 0 14px;
@@ -69,6 +91,14 @@
   font-size: 14px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: #fff;
+    border-color: #fff;
+    color: #111;
+  }
+}
+
 .buttonSecondary {
   height: 34px;
   padding: 0 12px;
@@ -78,6 +108,14 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .buttonSecondary {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #ededed;
+  }
 }
 
 .kpiRow {
@@ -117,6 +155,17 @@
   font-size: 12px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .table th,
+  .table td {
+    border-bottom-color: #333;
+  }
+
+  .table th {
+    color: #999;
+  }
+}
+
 .amount {
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -131,6 +180,14 @@
   font-size: 12px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .badgeExpense {
+    background: #4a2020;
+    border-color: #6a3030;
+    color: #ffb3b3;
+  }
+}
+
 .badgeIncome {
   display: inline-block;
   padding: 3px 8px;
@@ -140,8 +197,39 @@
   font-size: 12px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .badgeIncome {
+    background: #1a3a25;
+    border-color: #2a5a38;
+    color: #a3f5c0;
+  }
+}
+
+.badgeCategory {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f0f0f0;
+  border: 1px solid #d8d8d8;
+  font-size: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badgeCategory {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+  }
+}
+
 .notice {
   margin-top: 10px;
   color: #b00020;
   font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .notice {
+    color: #ff6b6b;
+  }
 }

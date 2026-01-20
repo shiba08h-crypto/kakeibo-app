@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e7e7e7;
+  height: 100%;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #999;
+  font-size: 14px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.summaryLabel {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.summaryValue {
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.summaryValue.income {
+  color: #2e7d32;
+}
+
+.summaryValue.expense {
+  color: #d32f2f;
+}
+
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.chart {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}
+
+.slice {
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slice:hover {
+  opacity: 0.85;
+}
+
+.centerLabel {
+  font-size: 10px;
+  fill: #666;
+  font-weight: 500;
+}
+
+.centerValue {
+  font-size: 14px;
+  fill: #111;
+  font-weight: 700;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legendItem {
+  display: grid;
+  grid-template-columns: 16px 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.legendColor {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legendLabel {
+  font-weight: 600;
+  color: #333;
+}
+
+.legendAmount {
+  font-weight: 600;
+  color: #111;
+  font-variant-numeric: tabular-nums;
+}
+
+.legendPercentage {
+  color: #666;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 768px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryValue {
+    font-size: 16px;
+  }
+
+  .chart {
+    max-width: 220px;
+  }
+}

@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.typeButton {
+  height: 44px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  color: #666;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.typeButton:hover {
+  border-color: #ccc;
+  background: #f9f9f9;
+}
+
+.typeButtonActive {
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.typeExpense.typeButtonActive {
+  border-color: #ff6b6b;
+  background: #ffe8e8;
+  color: #d32f2f;
+}
+
+.typeIncome.typeButtonActive {
+  border-color: #4caf50;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.categoryButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 80px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categoryButton:hover {
+  border-color: #bbb;
+  background: #f9f9f9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.categoryButtonActive {
+  border-color: #111;
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emoji {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categoryButton {
+    height: 70px;
+  }
+
+  .emoji {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+}

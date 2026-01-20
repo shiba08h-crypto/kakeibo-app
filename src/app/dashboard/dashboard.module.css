@@ -1,0 +1,147 @@
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtle {
+  color: #666;
+  font-size: 13px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 180px 140px 1fr 1fr auto;
+  gap: 10px;
+}
+
+@media (max-width: 740px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input,
+.select {
+  height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.button {
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buttonSecondary {
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.kpiRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.kpiValue {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table th {
+  color: #666;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.badgeExpense {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #ffe8e8;
+  border: 1px solid #ffcdcd;
+  font-size: 12px;
+}
+
+.badgeIncome {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e8fff0;
+  border: 1px solid #c9f5d8;
+  font-size: 12px;
+}
+
+.notice {
+  margin-top: 10px;
+  color: #b00020;
+  font-size: 13px;
+}

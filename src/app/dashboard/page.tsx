@@ -193,7 +193,15 @@ export default function DashboardPage() {
             className={styles.input}
             placeholder="金額（例：1200）"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => {
+              // 全角数値を半角数値に変換
+              const normalizedValue = e.target.value.replace(/[０-９]/g, (s) =>
+                String.fromCharCode(s.charCodeAt(0) - 0xFEE0)
+              );
+              setAmount(normalizedValue);
+            }}
+            inputMode="numeric"
+            pattern="[0-9]*"
           />
 
           <input

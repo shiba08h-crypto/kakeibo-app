@@ -1,4 +1,4 @@
-import { coreValues } from "../content";
+import { coreValues, siteConfig } from "../content";
 
 export default function CoreValueSection() {
   return (
@@ -45,7 +45,9 @@ export default function CoreValueSection() {
         {/* Mid CTA */}
         <div className="text-center mt-12">
           <a
-            href="#booking"
+            href={siteConfig.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-button"
             data-cta="core-value"
             role="button"

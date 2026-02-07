@@ -1,24 +1,29 @@
+import HeroSection from "./lp/components/HeroSection";
+import ProblemSection from "./lp/components/ProblemSection";
+import CoreValueSection from "./lp/components/CoreValueSection";
+import FeaturesSection from "./lp/components/FeaturesSection";
+import HowItWorksSection from "./lp/components/HowItWorksSection";
+import SocialProofSection from "./lp/components/SocialProofSection";
+import PricingSection from "./lp/components/PricingSection";
+import FAQSection from "./lp/components/FAQSection";
+import FinalCTASection from "./lp/components/FinalCTASection";
+import FooterSection from "./lp/components/FooterSection";
+import MobileFixedCTA from "./lp/components/MobileFixedCTA";
+
 export default function Home() {
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>家計簿アプリ</h1>
-      <p>ここから開発を進めます。</p>
-      <a
-        href="https://kakeibo-app-kgbp.vercel.app/login"
-        style={{
-          display: "inline-block",
-          marginTop: "1rem",
-          padding: "0.75rem 1.5rem",
-          backgroundColor: "#0070f3",
-          color: "white",
-          textDecoration: "none",
-          borderRadius: "0.5rem",
-          fontWeight: "500",
-          transition: "background-color 0.2s"
-        }}
-      >
-        ログインへ
-      </a>
+    <main>
+      <HeroSection />
+      <ProblemSection />
+      <CoreValueSection />
+      <FeaturesSection />
+      <HowItWorksSection />
+      <SocialProofSection />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTASection />
+      <FooterSection />
+      <MobileFixedCTA />
     </main>
   );
 }

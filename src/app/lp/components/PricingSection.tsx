@@ -1,4 +1,4 @@
-import { pricing } from "../content";
+import { pricing, siteConfig } from "../content";
 
 export default function PricingSection() {
   return (
@@ -108,7 +108,9 @@ export default function PricingSection() {
 
               {/* CTA */}
               <a
-                href="#booking"
+                href={siteConfig.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block text-center py-3 rounded-lg font-bold text-sm transition-all ${
                   plan.recommended
                     ? "cta-button w-full"

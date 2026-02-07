@@ -1,4 +1,4 @@
-import { finalCta } from "../content";
+import { finalCta, siteConfig } from "../content";
 
 export default function FinalCTASection() {
   return (
@@ -20,7 +20,9 @@ export default function FinalCTASection() {
         </p>
 
         <a
-          href="#booking"
+          href={siteConfig.bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="cta-button text-lg md:text-xl px-10 py-5"
           data-cta="final"
           role="button"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { siteConfig } from "../content";
 
 export default function MobileFixedCTA() {
   const [visible, setVisible] = useState(false);
@@ -25,7 +26,9 @@ export default function MobileFixedCTA() {
     >
       <div className="bg-navy-800/95 backdrop-blur-sm border-t border-white/10 px-4 py-3 safe-area-pb">
         <a
-          href="#booking"
+          href={siteConfig.bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="cta-button w-full text-sm py-3"
           data-cta="mobile-fixed"
           role="button"

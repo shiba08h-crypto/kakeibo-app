@@ -1,7 +1,7 @@
 export const siteConfig = {
   serviceName: "Marriage Compass",
   serviceNameJa: "マリッジコンパス",
-  bookingUrl: "#booking",
+  bookingUrl: "https://timerex.net/s/shiba.08h_1a1f/83cf8db1",
   lineUrl: "#line",
 };
 

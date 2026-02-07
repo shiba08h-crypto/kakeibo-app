@@ -1,4 +1,4 @@
-import { hero } from "../content";
+import { hero, siteConfig } from "../content";
 
 function SparkleIcon({ className }: { className?: string }) {
   return (
@@ -103,7 +103,9 @@ export default function HeroSection() {
           </p>
 
           <a
-            href={`#booking`}
+            href={siteConfig.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-button text-base md:text-lg group"
             data-cta="hero"
             role="button"

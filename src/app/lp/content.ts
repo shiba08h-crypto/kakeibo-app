@@ -6,14 +6,14 @@ export const siteConfig = {
 };
 
 export const hero = {
-  badge: "IBJ正規加盟店",
+  badge: "日本一の会員数を誇るIBJの結婚相談所 正規加盟店",
   headline: "理想の女性に",
-  headlineAccent: "「選ばれる自分」",
-  headlineSuffix: "へ",
+  headlineAccent: "選ばれる自分へ",
+  headlineSuffix: "",
   subHeadline:
-    "アプリで成果が出なかった方対象。\n実績多数・プロの並走で結婚まで導きます。",
+    "アプリや結婚相談所で成果が出なかった方対象。\n実績多数のプロの並走であなたを結婚まで導きます。",
   description:
-    "IBJ加盟×行動コーチング型結婚相談所。プロフィール作成・服装 髪型指導・LINE指導・初回お見合いやデートの練習までフルサポート。",
+    "IBJ加盟×行動コーチング型結婚相談所。\nプロフィール作成・服装＆髪型指導・初回お見合いやデートの練習までフルサポート。",
   ctaNote: "まずは30分の無料カウンセリングで相談から。",
   ctaText: "無料カウンセリングを予約する（30分）",
 };
@@ -118,6 +118,37 @@ export const features = {
   ],
 };
 
+export const beforeAfter = {
+  heading: "受講前後の変化",
+  before: {
+    label: "Before",
+    items: [
+      "プロフィール写真が自撮りで暗い印象",
+      "服装に無頓着、清潔感が足りない",
+      "初回デートで何を話せばいいかわからない",
+      "LINEの返信タイミングがつかめない",
+      "お見合い後にお断りされ続ける",
+    ],
+  },
+  after: {
+    label: "After",
+    items: [
+      "プロカメラマンによる好印象な写真に",
+      "TPOに合った清潔感のあるコーディネート",
+      "会話の引き出しが増え、自然にトークできる",
+      "LINEで好感度を上げる返信ができる",
+      "お見合いから交際に繋がるように",
+    ],
+  },
+};
+
+export const onlineBanner = {
+  heading: "すべてオンラインで完結！",
+  subText: "全国どこからでも受講可能。",
+  description:
+    "カウンセリング・コーチング面談・服装指導・LINE添削すべてオンライン対応。地方在住でも安心して受講いただけます。",
+};
+
 export const howItWorks = {
   heading: "ご入会までの流れ",
   steps: [
@@ -144,6 +175,8 @@ export const howItWorks = {
 
 export const socialProof = {
   heading: "ご成婚者の声",
+  subHeading:
+    "日本一の会員数 × コーチングモデルにより再現性を証明。",
   testimonials: [
     {
       age: "34歳",
@@ -168,6 +201,46 @@ export const socialProof = {
       quote:
         "週1の面談があるから、忙しくても活動を止めずに済んだ。一人だったら絶対に途中で辞めてました。",
       initial: "K",
+    },
+    {
+      age: "36歳",
+      occupation: "金融機関勤務",
+      period: "活動5ヶ月で成婚",
+      quote:
+        "プロフィール写真を撮り直しただけで、お見合いの申し込み数が3倍に。見た目の印象がこんなに大事だとは思いませんでした。",
+      initial: "M",
+    },
+    {
+      age: "33歳",
+      occupation: "エンジニア",
+      period: "活動7ヶ月で成婚",
+      quote:
+        "女性との会話が苦手でしたが、デートのロープレを繰り返すうちに自然に話せるようになりました。コーチの存在が心強かったです。",
+      initial: "Y",
+    },
+    {
+      age: "40歳",
+      occupation: "経営者",
+      period: "活動4ヶ月で成婚",
+      quote:
+        "他の相談所では放置気味だったのが、ここでは毎週面談があり、具体的なアクションを一緒に決めてくれる。結果がすぐ出ました。",
+      initial: "A",
+    },
+    {
+      age: "29歳",
+      occupation: "医療従事者",
+      period: "活動9ヶ月で成婚",
+      quote:
+        "初めての結婚相談所で不安でしたが、一つひとつ丁寧に教えてもらえました。交際からプロポーズまでのフォローも手厚かったです。",
+      initial: "H",
+    },
+    {
+      age: "35歳",
+      occupation: "商社勤務",
+      period: "活動6ヶ月で成婚",
+      quote:
+        "地方在住ですが、すべてオンラインで完結できたのが助かりました。距離を感じることなく、密にサポートしてもらえました。",
+      initial: "N",
     },
   ],
   stats: [

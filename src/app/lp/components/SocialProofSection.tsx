@@ -9,10 +9,14 @@ export default function SocialProofSection() {
       <div className="max-w-5xl mx-auto">
         <h2
           id="socialproof-heading"
-          className="section-heading text-navy-800 mb-14"
+          className="section-heading text-navy-800 mb-3"
         >
           {socialProof.heading}
         </h2>
+
+        <p className="text-center text-gray-500 text-sm md:text-base mb-12">
+          {socialProof.subHeading}
+        </p>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-14">
@@ -36,8 +40,8 @@ export default function SocialProofSection() {
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="space-y-5">
+        {/* Testimonials - grid layout for 5-10 people */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {socialProof.testimonials.map((item, i) => (
             <div
               key={i}
@@ -60,7 +64,7 @@ export default function SocialProofSection() {
                       {item.period}
                     </span>
                   </div>
-                  <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     {item.quote}
                   </p>
                 </div>

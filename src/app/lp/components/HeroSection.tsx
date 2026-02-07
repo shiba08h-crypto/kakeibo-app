@@ -21,14 +21,14 @@ function SparkleIcon({ className }: { className?: string }) {
 function IBJBadge() {
   return (
     <div className="flex flex-col items-center" aria-label="IBJ正規加盟店認定バッジ">
-      <div className="bg-white rounded-lg px-3 py-2 shadow-lg border border-gold-500/30">
+      <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg border border-gold-500/30">
         <div className="flex justify-center mb-0.5">
           <svg width="20" height="16" viewBox="0 0 20 16" fill="none" aria-hidden="true">
             <path d="M10 0L12.5 5H17.5L13.5 8.5L15 14L10 10.5L5 14L6.5 8.5L2.5 5H7.5L10 0Z" fill="#D4A843"/>
           </svg>
         </div>
         <div className="text-center">
-          <span className="text-red-500 text-xs font-bold">♥</span>
+          <span className="text-red-500 text-xs font-bold">&#9829;</span>
           <span className="text-navy-800 text-sm font-bold tracking-tight">IBJ</span>
         </div>
         <div className="text-navy-800 text-[10px] font-bold text-center leading-tight">
@@ -48,21 +48,21 @@ export default function HeroSection() {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700/80" />
 
-      {/* Counselor silhouette area - right side */}
+      {/* Woman image placeholder area - right side */}
       <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden md:block">
-        <div className="absolute inset-0 bg-gradient-to-l from-navy-600/40 to-navy-700" />
-        {/* Professional silhouette placeholder */}
-        <div className="absolute right-8 bottom-0 w-[340px] h-[520px]">
-          <div className="relative w-full h-full">
-            {/* Head */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-28 bg-navy-600/60 rounded-full" />
-            {/* Hair */}
-            <div className="absolute top-2 left-1/2 -translate-x-[40%] w-28 h-36 bg-navy-800/50 rounded-t-full rounded-b-[40%]" />
-            {/* Body - suit */}
-            <div className="absolute top-32 left-1/2 -translate-x-1/2 w-44 h-[380px] bg-navy-600/40 rounded-t-3xl">
-              {/* Suit lapels */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-20 bg-white/8 rounded-b-full" />
+        <div className="absolute inset-0 bg-gradient-to-l from-navy-600/20 to-navy-700" />
+        {/* Replace this placeholder with actual woman image using next/image */}
+        <div className="absolute right-0 bottom-0 w-full h-full flex items-end justify-center">
+          <div className="relative w-[380px] h-[560px] bg-gradient-to-t from-navy-600/30 to-transparent rounded-t-[40%] overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-28 h-28 mx-auto mb-4 rounded-full bg-white/10" />
+                <div className="w-48 h-[320px] mx-auto bg-white/5 rounded-t-3xl" />
+              </div>
             </div>
+            <p className="absolute bottom-4 left-0 right-0 text-center text-white/30 text-xs">
+              ※女性画像をここに配置
+            </p>
           </div>
         </div>
       </div>
@@ -74,9 +74,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-16">
-        {/* IBJ Badge - top right on mobile, absolute on desktop */}
-        <div className="flex justify-end mb-8 md:absolute md:top-8 md:right-8">
+        {/* IBJ Badge & badge text */}
+        <div className="flex items-center gap-3 mb-8 flex-wrap">
           <IBJBadge />
+          <span className="bg-gold-500/15 text-gold-400 text-xs md:text-sm font-bold px-3 py-1.5 rounded-full border border-gold-500/30">
+            {hero.badge}
+          </span>
         </div>
 
         <div className="max-w-xl">
@@ -87,14 +90,16 @@ export default function HeroSection() {
             {hero.headline}
             <br />
             <span className="text-gold-400">{hero.headlineAccent}</span>
-            <span className="text-white">{hero.headlineSuffix}</span>
+            {hero.headlineSuffix && (
+              <span className="text-white">{hero.headlineSuffix}</span>
+            )}
           </h1>
 
           <p className="text-white/90 text-base sm:text-lg md:text-xl font-medium leading-relaxed mb-4 whitespace-pre-line">
             {hero.subHeadline}
           </p>
 
-          <p className="text-white/70 text-sm md:text-base leading-relaxed mb-3">
+          <p className="text-white/70 text-sm md:text-base leading-relaxed mb-3 whitespace-pre-line">
             {hero.description}
           </p>
 
@@ -103,7 +108,7 @@ export default function HeroSection() {
           </p>
 
           <a
-            href={`#booking`}
+            href="#booking"
             className="cta-button text-base md:text-lg group"
             data-cta="hero"
             role="button"

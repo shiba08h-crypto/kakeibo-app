@@ -48,23 +48,13 @@ export default function HeroSection() {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700/80" />
 
-      {/* Counselor silhouette area - right side */}
+      {/* Counselor photo - right side */}
       <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden md:block">
-        <div className="absolute inset-0 bg-gradient-to-l from-navy-600/40 to-navy-700" />
-        {/* Professional silhouette placeholder */}
-        <div className="absolute right-8 bottom-0 w-[340px] h-[520px]">
-          <div className="relative w-full h-full">
-            {/* Head */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-28 bg-navy-600/60 rounded-full" />
-            {/* Hair */}
-            <div className="absolute top-2 left-1/2 -translate-x-[40%] w-28 h-36 bg-navy-800/50 rounded-t-full rounded-b-[40%]" />
-            {/* Body - suit */}
-            <div className="absolute top-32 left-1/2 -translate-x-1/2 w-44 h-[380px] bg-navy-600/40 rounded-t-3xl">
-              {/* Suit lapels */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-20 bg-white/8 rounded-b-full" />
-            </div>
-          </div>
-        </div>
+        <img
+          src="/hero-counselor.PNG"
+          alt="カウンセラー"
+          className="absolute right-0 bottom-0 h-full w-auto object-contain object-right-bottom"
+        />
       </div>
 
       {/* Sparkle decorations */}

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import styles from "./login.module.css";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -49,11 +50,12 @@ export default function LoginPage() {
   };
 
   return (
-    <main style={{ padding: "2rem", maxWidth: 520 }}>
-      <h1>ログイン</h1>
+    <main className={styles.container}>
+      <h1 className={styles.title}>ログイン</h1>
 
-      <div style={{ marginTop: "1rem", display: "grid", gap: 8 }}>
+      <div className={styles.form}>
         <input
+          className={styles.input}
           type="email"
           placeholder="メールアドレス"
           value={email}
@@ -61,22 +63,23 @@ export default function LoginPage() {
         />
 
         <input
+          className={styles.input}
           type="password"
           placeholder="パスワード"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
-          <button onClick={signIn} disabled={loading}>
+        <div className={styles.buttonGroup}>
+          <button className={styles.button} onClick={signIn} disabled={loading}>
             ログイン
           </button>
-          <button onClick={signUp} disabled={loading}>
+          <button className={styles.button} onClick={signUp} disabled={loading}>
             新規登録
           </button>
         </div>
 
-        {message && <p style={{ marginTop: 8 }}>{message}</p>}
+        {message && <p className={styles.message}>{message}</p>}
       </div>
     </main>
   );
